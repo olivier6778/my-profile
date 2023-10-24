@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #348F50, #56B4D3);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+header {
+    background-image: url('./images/header-background.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+}
+
+header h1 {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    font-size: 3em;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    margin-top: 10px;
+    font-style: italic;
+    color: white;
+    font-size: 1.2em;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%; 
+    height: auto; 
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 10px;
+    font-style: italic;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+ul, ol {
+    list-style-type: none;
+    padding-left: 0;
+     margin:0 16px;
+    display : inline-block;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+li > ul {
+    margin-top: 5px;
+    padding-left: 20px;
+
+}
+
+video {
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.section-box {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(10,10,10.1), 0 2px 6px rgba(10,10,10,0.08);
+    width: 80%;
+    max-width: 600px;
+   position: relative; /* Needed for z-index to take effect */
+    z-index: 1; /* Default stacking order */
+    transition: transform 0.5s, z-index 0.5s; /* Smooth transition for the scaling effect and z-index */
+    text-align: center;
+}
+
+.section-box:hover {
+    transform: scale(1.1); /* Scale the box up by 50% */
+    z-index: 10; /* Increase stacking order to make it appear above other content */
+
+}
+
+.lanebuleuse-link {
+    font-size: 1.5em;
+    color: red;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.lanebuleuse-link:hover {
+    background-color: red;
+    color: white;
+}
+
+a {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 1;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.section-box {
+    /* ... existing styles ... */
+    opacity: 0; /* Start with an opacity of 0 */
+    animation: fadeIn 0.5s forwards; /* Apply the fadeIn animation over 1.5 seconds and make sure it remains at the final state (forwards) */
+    animation-delay: 0.5s; /* Delay the start of the animation by 0.5 seconds */
+}
